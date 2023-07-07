@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-header: #2D333B;
+    --color-bg: #22272E;
+
+    --color-border: #444C56;
+    --color-border-active: #EC775C;
+
+    --color-text-title: #ADBAC7;
+    --color-text-normal: #858F9A;
+    --color-text-link: #539BF5;
+
+    --color-btn-text: #adbac7;
+    --color-btn-bg: #373e47;
+    --color-btn-border: rgba(205, 217, 229, 0.1);
+    --color-btn-hover-bg: #444c56;
+    --color-btn-hover-border: #768390;
+    --color-btn-active-bg: hsla(213, 12%, 27%, 1);
+    --color-btn-active-border: #636e7b;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2D333B;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444C56;
+    border-radius: 4px;
+}
+
+@font-face {
+    font-family: "Hermit";
+    src: url("./assets/fonts/Hermit-Regular.otf");
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Hermit";
+    color: var(--color-text-normal);
+    background-color: var(--color-bg);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    max-width: 1200px;
+}
+
+.shadow { 
+    box-shadow: black 0px 0px 10px 0px;
+}
+
+.big-title {
+    z-index: 1;
+    font-size: 5vw;
+    color: var(--color-text-title);
+    text-align: center;
+}
+
+.medium-title {
+    font-size: 40px;
+    color: var(--color-text-title);
+    text-align: center;
+}
+
+.small-image {
+    object-fit: fill;
+    height: 25px;
+}
+
+.medium-image {
+    object-fit: fill;
+    height: 150px;
+}
+
+.large-image {
+    object-fit: fill;
+    height: 400px;
+}
+
+.selectable-shadow:hover {
+    box-shadow: black 0px 0px 50px 0px;
+}
+
+.project-card {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+    border: var(--color-border) solid 1px;
+    border-radius: 10px;
+    color: var(--color-text-normal);
+    text-decoration: none;
+}
+
+.project-card > img {
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border: var(--color-border) solid 1px;
+    border-radius: 10px;
+}
+
+.project-card > p {
+    width: 250px;
+}
+
+@media only screen and (max-width: 450px) {
+    .big-title {
+        font-size: 10vw;
+    }
+
+    .large-image {
+        height: 250px;
+    }
+}
