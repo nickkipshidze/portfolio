@@ -64,6 +64,14 @@ p {
     max-width: 1200px;
 }
 
+#projects-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 100px 0 100px;
+}
+
 .shadow { 
     box-shadow: black 0px 0px 10px 0px;
 }
@@ -129,6 +137,36 @@ p {
     }
 
     .large-image {
-        height: 250px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #projects-section {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 0px;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .project-card {
+        margin: 0;
+        flex-grow: 1;
+        border-radius: 0;
+        border-style: dashed;
+        border-left: none;
+        border-right: none;
+    }
+
+    .project-card > img {
+        width: 100%;
+        height: 140px;
+    }
+
+    .project-card > p {
+        width: 100%;
     }
 }
