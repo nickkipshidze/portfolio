@@ -1,3 +1,4 @@
+// Basic conway's game of life code
 class GameOfLife {
     constructor(canvasId, cellSize = 30, colorAlive = "rgba(255, 255, 255, 1)", colorDead = "rgba(255, 255, 255, 0.2)", delay = 128) {
         this.canvas = document.getElementById(canvasId);
@@ -25,6 +26,12 @@ class GameOfLife {
     }
 
     drawGlider(grid, x, y) {
+        //            ## 
+        //              ##
+        //          ######
+        //
+        // Thats my profile picture (:
+        
         const coordinates = [
                     [0, 1],
 
@@ -157,14 +164,18 @@ class GameOfLife {
     }
 }
 
+// First section has no variable assigned to it
 new GameOfLife("life-canvas-1").updateCanvas();
 
+// Second section is assigned to the variable "game"
+// which is used for managing "mousemove" events on it
 const game = new GameOfLife(
     "life-canvas-2", 30, 
     "rgba(0, 0, 0, 1)", "rgba(0, 0, 0, 0.2)"
 );
 game.updateCanvas();
 
+// Code for interactive section
 game.canvas.addEventListener("mousemove", (event) => {
     const rect = game.canvas.getBoundingClientRect();
     let y = Math.floor((event.clientY - rect.top) / game.cellSize);
