@@ -3,26 +3,6 @@
     padding: 0;
 }
 
-:root {
-    --color-header: #2D333B;
-    --color-bg: #22272E;
-
-    --color-border: #444C56;
-    --color-border-active: #EC775C;
-
-    --color-text-title: #ADBAC7;
-    --color-text-normal: #858F9A;
-    --color-text-link: #539BF5;
-
-    --color-btn-text: #adbac7;
-    --color-btn-bg: #373e47;
-    --color-btn-border: rgba(205, 217, 229, 0.1);
-    --color-btn-hover-bg: #444c56;
-    --color-btn-hover-border: #768390;
-    --color-btn-active-bg: hsla(213, 12%, 27%, 1);
-    --color-btn-active-border: #636e7b;
-}
-
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -42,131 +22,75 @@
 }
 
 body {
-    overflow-x: hidden;
-    font-family: "Hermit";
-    color: var(--color-text-normal);
-    background-color: var(--color-bg);
+    font-family: Hermit;
+    background-color: #000;
 }
 
 section {
+    width: 100%;
+    height: 100vh;
+}
+
+.glass-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    padding: 40px;
+    border-radius: 60px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(7.5px);
+    flex-grow: 0;
 }
 
-h2 {
-    text-align: center;
+.text-primary-blue {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    background: conic-gradient(from 180deg at 50% 50%, #30F 0deg, #B5A3FF 360deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-p {
-    max-width: 1200px;
+.text-subtitle-grey {
+    background: conic-gradient(from 180deg at 50% 50%, #353535 0deg, #626262 360deg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#projects-section {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 0 100px 0 100px;
+.info-card {
+    max-width: 700px;
+    max-height: 700px;
 }
 
-.shadow { 
-    box-shadow: black 0px 0px 10px 0px;
-}
-
-.big-title {
-    z-index: 1;
-    font-size: 5vw;
-    color: var(--color-text-title);
-    text-align: center;
-}
-
-.medium-title {
-    font-size: 40px;
-    color: var(--color-text-title);
-    text-align: center;
-}
-
-.small-image {
-    object-fit: fill;
-    height: 25px;
-}
-
-.medium-image {
-    object-fit: fill;
-    height: 150px;
-}
-
-.large-image {
-    object-fit: fill;
-    height: 400px;
-}
-
-.selectable-shadow:hover {
-    box-shadow: black 0px 0px 50px 0px;
-}
-
-.project-card {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-    flex-direction: column;
-    border: var(--color-border) solid 1px;
-    border-radius: 10px;
-    color: var(--color-text-normal);
-    text-decoration: none;
-}
-
-.project-card > img {
-    object-fit: cover;
-    width: 250px;
-    height: 250px;
-    border: var(--color-border) solid 1px;
-    border-radius: 10px;
-}
-
-.project-card > p {
-    width: 250px;
-}
-
-@media only screen and (max-width: 450px) {
-    .big-title {
-        font-size: 10vw;
-    }
-
-    .large-image {
-        height: 200px;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    #projects-section {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 0px;
-        width: 100vw;
-        padding: 0;
-        margin: 0;
-    }
-
-    .project-card {
-        margin: 0;
-        flex-grow: 1;
+@media only screen and (max-width: 800px) {
+    .info-card {
+        max-width: none;
+        max-height: none;
         border-radius: 0;
-        border-style: dashed;
-        border-left: none;
-        border-right: none;
+        width: 100vw;
+        height: 100vh;
+        padding: 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .info-card > p {
+        font-size: 16px;
     }
 
-    .project-card > img {
-        width: 100%;
-        height: 140px;
+    .info-card > img {
+        content: url("https://streak-stats.demolab.com/?user=NickKipshidze&hide_border=true&card_width=200&theme=algolia&border_radius=30&background=00000000&stroke=00000000");
     }
 
-    .project-card > p {
-        width: 100%;
+    .text-primary-blue {
+        font-size: 30px;
+    }
+
+    .text-subtitle-grey {
+        font-size: 20px;
     }
 }
