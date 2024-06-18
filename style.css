@@ -17,6 +17,7 @@
 }
 
 body {
+    background-color: #000;
     color: #fff;
     font-family: monospace;
     overflow-x: hidden;
@@ -62,6 +63,7 @@ section {
 
 @media screen and (max-width: 565px) {
     .overlay.main > h1 { font-size: 40px; }
-    .overlay.main > div { font-size: 11px; }
-    main { font-size: 11px; }
+    .overlay.main > div { font-size: 10px; }
+    .img-icon { width: 20px; height: 20px; }
+    main { font-size: 10px; }
 }
