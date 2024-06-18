@@ -3,9 +3,23 @@
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #2D333B;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #444C56;
+    border-radius: 4px;
+}
+
 body {
     color: #fff;
     font-family: monospace;
+    overflow-x: hidden;
 }
 
 section {
@@ -37,7 +51,7 @@ section {
 
 .white-round {
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffffbe;
     color: #000;
     border-radius: 50px;
 }
@@ -46,7 +60,8 @@ section {
 .overlay.main > h1 { font-size: 64px; }
 .overlay.main > div { font-size: 17px; }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 565px) {
     .overlay.main > h1 { font-size: 40px; }
     .overlay.main > div { font-size: 11px; }
+    main { font-size: 11px; }
 }
