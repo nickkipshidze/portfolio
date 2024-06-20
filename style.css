@@ -30,6 +30,11 @@ section {
     background-color: #000;
 }
 
+section > .projects > h1 {
+    padding: 27px;
+    font-size: 30px;
+}
+
 .img-icon {
     width: 30px;
     height: 30px;
@@ -66,4 +71,10 @@ section {
     .overlay.main > div { font-size: 10px; }
     .img-icon { width: 20px; height: 20px; }
     main { font-size: 10px; }
+}
+
+@media screen and (max-width: 420px) {
+    .auto-hide {
+        display: none !important;
+    }
 }
