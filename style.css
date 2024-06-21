@@ -32,7 +32,42 @@ section {
 
 section > .projects > h1 {
     padding: 27px;
+    margin-bottom: 70px;
     font-size: 30px;
+}
+
+section > .projects > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section > .projects > div > .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    margin: 20px;
+    background-color: #141414;
+    border-radius: 10px;
+    border: 1px solid #ffffff4f;
+    overflow: hidden;
+    width: 240px;
+    height: 380px;
+    z-index: 1;
+    color: #fff;
+    text-decoration: none;
+}
+
+section > .projects > div > .project-card:hover {
+    background-color: #222222;
+}
+
+section > .projects > div > .project-card > img {
+    width: 100%;
+    height: 45%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .img-icon {
@@ -76,5 +111,13 @@ section > .projects > h1 {
 @media screen and (max-width: 420px) {
     .auto-hide {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    section > .projects > div > .project-card {
+        margin: 0;
+        width: 100vw;
+        border-radius: 0;
     }
 }
