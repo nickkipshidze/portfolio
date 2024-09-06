@@ -83,6 +83,52 @@ section > .projects > div > .project-card > div:first-child > img {
     border-radius: 10px;
 }
 
+section > .projects > div > .larger-project-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: #141414;
+    border-radius: 10px;
+    border: 1px solid #ffffff4f;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    z-index: 1;
+    color: #fff;
+    text-decoration: none;
+}
+
+section > .projects > div > .larger-project-card:hover {
+    background-color: #222222;
+}
+
+section > .projects > div > .larger-project-card > img {
+    margin: 20px;
+    height: calc(100% - 40px);
+    max-width: 40%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+section > .projects > div > .larger-project-card > div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding-right: 10px;
+    gap: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+section > .projects > div > .larger-project-card > div > h1 {
+    font-size: 36px;
+}
+
+section > .projects > div > .larger-project-card > div > p {
+    font-size: 20px;
+}
+
 .img-icon {
     width: 30px;
     height: 30px;
